@@ -1,0 +1,16 @@
+
+<div class="card">
+  <img [src]="items.ImgUrl" class="card-img-top" alt="image">
+  <div class="card-body text-center">
+    <h5>{{items.Name}}</h5>
+    <h4 *ngIf="items.Price">${{items.Price}}</h4>
+    <button class="btnl" (click)="decreament()">-</button>
+    <input  class="text text-center mr-2 ml-2"  [(ngModel)]="inputNumber">
+    <button class="btnl" (click)="increament()">+</button>
+    <button  class="btn btn-primary mt-2" (click)="onClick()">Add to Bag</button>
+  </div>
+</div>
+
+
+
+

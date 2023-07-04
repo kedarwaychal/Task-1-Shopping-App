@@ -1,0 +1,37 @@
+
+<div class="container">
+    <div class="row">
+      
+        <h1>My Shopping Bag</h1>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Sr.no</th>
+                <th scope="col">Produnct Name</th>
+                <th scope="col">Price Details</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Order Total</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody >
+              <tr *ngFor="let details of detailList; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{details.Name}}</td>
+                <td>${{details.Price}}</td>
+                <td>{{details.InputNumber}}</td>
+                <td>{{details.Price *details.InputNumber}}</td>
+                <td><button class="btn btn-danger" (click)="onClick(this.i,this.details)">Cancel</button></td>
+              </tr>
+              <tr>
+                <td colspan="4" class="text-right">Order total</td>
+                
+                <td>{{value}}</td>
+              </tr>
+            </tbody>
+          </table>
+      
+    </div>
+</div>
+
+
